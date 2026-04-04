@@ -17,17 +17,15 @@ function multiply(digitOne, digitTwo) {
 }
 
 function applyOperatorType(inputOperator, inputDigitOne, inputDigitTwo) {
-  if (inputOperator === "+") {
-    return add(inputDigitOne, inputDigitTwo);
-  } else if (inputOperator === "-") {
-    return subtract(inputDigitOne, inputDigitTwo);
-  } else if (inputOperator === "%") {
-    return divide(inputDigitOne, inputDigitTwo);
-  } else if (inputOperator === "*") {
-    return multiply(inputDigitOne, inputDigitTwo);
-  } else {
-    return prompt("Invalid operator");
-  }
+  const operatorFunctionBySymbol = {
+    "+": add,
+    "-": subtract,
+    "%": divide,
+    "*": multiply,
+  };
+
+  const operatorFunction = operatorFunctionBySymbol[inputOperator];
+  return operatorFunction(inputDigitOne, inputDigitTwo);
 }
 
-console.log(applyOperatorType("*", 1, 3));
+console.log(applyOperatorType("?", 4, 3));
