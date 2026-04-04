@@ -16,7 +16,7 @@ function multiply(digitOne, digitTwo) {
   return digitOne * digitTwo;
 }
 
-function getOperatorType(inputOperator, inputDigitOne, inputDigitTwo) {
+function applyOperatorType(inputOperator, inputDigitOne, inputDigitTwo) {
   if (inputOperator === "+") {
     return add(inputDigitOne, inputDigitTwo);
   } else if (inputOperator === "-") {
@@ -30,4 +30,4 @@ function getOperatorType(inputOperator, inputDigitOne, inputDigitTwo) {
   }
 }
 
-console.log(getOperatorType("*", 1, 3));
+console.log(applyOperatorType("*", 1, 3));
