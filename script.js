@@ -27,7 +27,10 @@ function applyOperatorType(inputOperator, inputDigitOne, inputDigitTwo) {
   };
 
   const operatorFunction = operatorFunctionBySymbol[inputOperator];
+  if (operatorFunction !== operatorFunctionBySymbol) {
+    throw new Error("Invalid operator input");
+  }
   return operatorFunction(inputDigitOne, inputDigitTwo);
 }
 
-console.log(applyOperatorType("+", 4, 3));
+console.log(applyOperatorType("?", 4, 3));
