@@ -1,8 +1,14 @@
 body {
     background-color: #3d7c47;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #content {
     color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #calculatorContainer {
     background-color: #09868b;
@@ -10,7 +16,6 @@ body {
     width: 500px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
 }
 #displayContainer {
@@ -18,20 +23,38 @@ body {
     margin: 25px;
     border: 1px solid black;
     border-radius: 10px;
-    height: 50px;
+    height: 100px;
+    align-content: stretch;
     display: flex;
 }
 #buttonContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     flex: 1;
+    flex-wrap: wrap;
 }
-.digitButton,
-.operatorButton {
+
+#digitButtonContainer {
+    display: flex;
+}
+
+#operatorButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+button {
     background-color: #f7f7f7;
     color: black;
     border-radius: 10px;
     height: 50px;
     width: 50px;
+}
+
+.digitButton {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.operatorButton {
+    display: flex;
+    text-align: center;
 }
