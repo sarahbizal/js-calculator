@@ -44,9 +44,9 @@ function applyOperatorType(inputOperator, inputDigitOne, inputDigitTwo) {
 
 digitButtons.forEach((digitButton) => {
   digitButton.addEventListener("click", () => {
-    const digit = digitButton.dataset.digit; // what the user pressed
-    currentNumber += digit; // we add to the current number here
-    displayElement.innerText += digit; // we add to the display in parallel
+    const digit = digitButton.dataset.digit;
+    currentNumber += digit;
+    displayElement.innerText += digit;
   });
 });
 
