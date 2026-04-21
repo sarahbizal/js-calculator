@@ -52,8 +52,9 @@ digitButtons.forEach((digitButton) => {
 
 operatorButtons.forEach((operatorButton) => {
   operatorButton.addEventListener("click", () => {
-    inputOperator = operatorButton.dataset.operator;
-    displayElement.innerText += inputOperator;
+    const operator = operatorButton.dataset.operator;
+    inputOperator = operator;
+    displayElement.innerText += operator;
     firstNumber = parseFloat(currentNumber);
     currentNumber = "";
   });
