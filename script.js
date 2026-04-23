@@ -63,7 +63,7 @@ operatorButtons.forEach((operatorButton) => {
 equalsButton.addEventListener("click", () => {
   lastNumber = parseFloat(currentNumber);
   currentNumber = applyOperatorType(inputOperator, firstNumber, lastNumber);
-  displayElement.innerText = currentNumber;
+  displayElement.innerText = parseFloat(currentNumber).toFixed(2);
   lastNumber = null;
   inputOperator = null;
 });
