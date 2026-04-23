@@ -42,10 +42,6 @@ function applyOperatorType(inputOperator, inputDigitOne, inputDigitTwo) {
   return operatorFunction(inputDigitOne, inputDigitTwo);
 }
 
-function roundDecimalToTwo(num) {
-  return Math.round(num * 100) / 100;
-}
-
 digitButtons.forEach((digitButton) => {
   digitButton.addEventListener("click", () => {
     const digit = digitButton.dataset.digit;
@@ -67,7 +63,7 @@ operatorButtons.forEach((operatorButton) => {
 equalsButton.addEventListener("click", () => {
   lastNumber = parseFloat(currentNumber);
   currentNumber = applyOperatorType(inputOperator, firstNumber, lastNumber);
-  displayElement.innerText = roundDecimalToTwo(currentNumber);
+  displayElement.innerText = parseFloat(currentNumber).toFixed(2);
   lastNumber = null;
   inputOperator = null;
 });
