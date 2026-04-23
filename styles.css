@@ -29,32 +29,39 @@ body {
 }
 #buttonContainer {
     display: flex;
-    flex: 1;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #digitButtonContainer {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #operatorButtonContainer {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
+
+#miscButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 button {
     background-color: #f7f7f7;
     color: black;
     border-radius: 10px;
-    height: 50px;
-    width: 50px;
-}
-
-.digitButton {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.operatorButton {
-    display: flex;
-    text-align: center;
+    height: 80px;
+    width: 80px;
 }
